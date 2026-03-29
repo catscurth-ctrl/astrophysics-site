@@ -1,57 +1,59 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>From Wonder To Theory</title>
+<title>Galaxy Site</title>
 
 <style>
 body {
   margin: 0;
-  font-family: 'Georgia', serif;
   color: white;
+  font-family: Arial;
+  text-align: center;
   background: black;
   overflow-x: hidden;
+}
+
+/* ⭐ MOVING STARS (YOU WILL SEE THIS CHANGE) */
+body::before {
+  content: "";
+  position: fixed;
+  width: 200%;
+  height: 200%;
+  background: url("https://www.transparenttextures.com/patterns/stardust.png");
+  animation: moveStars 40s linear infinite;
+  opacity: 0.5;
+}
+
+@keyframes moveStars {
+  from { transform: translate(0,0); }
+  to { transform: translate(-500px,-500px); }
 }
 
 /* HERO */
 .hero {
   height: 100vh;
-  background: url("https://www.popsci.com/wp-content/uploads/2019/03/18/KFZL6FYNQM42V6VAW6557RALRM.jpg?quality=85") center/cover no-repeat;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
 }
 
-.hero h1 {
-  font-size: 3rem;
+h1 {
+  font-size: 3em;
 }
 
-.hero p {
-  font-size: 1.2rem;
-}
-
-/* SECTION */
+/* SECTIONS */
 .section {
   padding: 100px 20px;
-  text-align: center;
+  max-width: 800px;
+  margin: auto;
 }
 
-/* BLACK HOLE SECTION */
-.blackhole {
-  background: url("https://cdn.mos.cms.futurecdn.net/2CeVaHDPPm2QAiLGCCtmPZ.jpg") center/cover no-repeat;
-}
-
-.whitehole {
-  background: url("https://preview.redd.it/white-hole-v0-xxnv4v0dxlld1.png?auto=webp&s=0facd4aac0fbbbb8484c9697bb8f0a3f0c317875") center/cover no-repeat;
-}
-
-/* FADE IN ANIMATION */
+/* SCROLL ANIMATION */
 .fade {
   opacity: 0;
-  transform: translateY(30px);
+  transform: translateY(40px);
   transition: 1s;
 }
 
@@ -65,39 +67,26 @@ body {
 <body>
 
 <div class="hero">
-  <h1>From Wonder To Theory</h1>
-  <p>This is my journey through mathematics, astrophysics, and physics</p>
+  <h1>🌌 From Wonder To Theory</h1>
 </div>
 
 <div class="section fade">
   <p>
   I wondered about aliens when I was younger.<br><br>
   I told my mom about them and she thought about it.<br><br>
-  Then I discovered my passion for calculus and physics.<br><br>
-  I grew fascinated by black holes — their darkness and mystery pulled me in.
-  </p>
-</div>
-
-<div class="section blackhole fade">
-  <h2>Black Hole Theory</h2>
-  <p>
-  A singularity represents infinite density.  
-  The event horizon is the point of no return.
-  </p>
-</div>
-
-<div class="section whitehole fade">
-  <h2>White Hole Concept</h2>
-  <p>
-  Opposite of black holes — instead of pulling in, they push out matter and energy.
+  Then I discovered my passion for physics and math.<br><br>
+  Black holes became my focus.
   </p>
 </div>
 
 <div class="section fade">
-  <h2>Cosmic Conclusion</h2>
-  <p>
-  This theory reimagines information from singularities and how data evolves through the universe.
-  </p>
+  <h2>Black Holes</h2>
+  <p>They compress matter and preserve information.</p>
+</div>
+
+<div class="section fade">
+  <h2>White Holes</h2>
+  <p>They may release and rebuild matter.</p>
 </div>
 
 <script>
@@ -115,3 +104,4 @@ window.addEventListener('scroll', () => {
 
 </body>
 </html>
+```
