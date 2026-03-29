@@ -1,52 +1,69 @@
-/* REALISTIC BLACK HOLE */
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Working Test</title>
+
+<style>
+body {
+  margin: 0;
+  background: black;
+  color: white;
+  font-family: Arial;
+  text-align: center;
+}
+
+/* STAR BACKGROUND */
+body::before {
+  content: "";
+  position: fixed;
+  width: 200%;
+  height: 200%;
+  background: url("https://www.transparenttextures.com/patterns/stardust.png");
+  animation: stars 40s linear infinite;
+  opacity: 0.5;
+}
+
+@keyframes stars {
+  from { transform: translate(0,0); }
+  to { transform: translate(-400px,-400px); }
+}
+
+/* BLACK HOLE (SAFE VERSION) */
 .blackhole {
-  width: 200px;
-  height: 200px;
-  margin: 80px auto;
+  width: 150px;
+  height: 150px;
+  margin: 60px auto;
   border-radius: 50%;
-  background: radial-gradient(circle, black 60%, #111 80%, transparent 100%);
+  background: radial-gradient(circle, black 60%, #222 80%);
   position: relative;
 }
 
-/* THIN ACCRETION DISK */
 .blackhole::before {
   content: "";
   position: absolute;
-  width: 260px;
-  height: 80px;
-  top: 60px;
-  left: -30px;
+  width: 200px;
+  height: 60px;
+  top: 45px;
+  left: -25px;
   border-radius: 50%;
-  background: linear-gradient(
-    to right,
-    transparent,
-    #ffcc66,
-    white,
-    #ffcc66,
-    transparent
-  );
+  background: linear-gradient(to right, transparent, orange, white, orange, transparent);
   opacity: 0.7;
-  filter: blur(2px);
-  animation: disk 12s linear infinite;
 }
 
-@keyframes disk {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
-/* ORBIT SYSTEM */
-.orbit-system {
-  width: 400px;
-  height: 400px;
-  margin: 80px auto;
+/* ORBIT */
+.orbit {
+  width: 200px;
+  height: 200px;
+  margin: 60px auto;
   position: relative;
 }
 
 .sun {
   width: 20px;
   height: 20px;
-  background: #fff3b0;
+  background: white;
   border-radius: 50%;
   position: absolute;
   top: 50%;
@@ -54,45 +71,38 @@
   transform: translate(-50%, -50%);
 }
 
-/* PLANETS */
 .planet {
+  width: 8px;
+  height: 8px;
+  background: gray;
+  border-radius: 50%;
   position: absolute;
   top: 50%;
   left: 50%;
-  border-radius: 50%;
-}
-
-/* DIFFERENT ORBITS */
-.p1 {
-  width: 6px;
-  height: 6px;
-  background: #ccc;
-  transform-origin: -60px;
-  animation: orbit 5s linear infinite;
-}
-
-.p2 {
-  width: 8px;
-  height: 8px;
-  background: #888;
-  transform-origin: -100px;
-  animation: orbit 9s linear infinite;
-}
-
-.p3 {
-  width: 10px;
-  height: 10px;
-  background: #aaa;
-  transform-origin: -140px;
-  animation: orbit 14s linear infinite;
+  transform-origin: -70px;
+  animation: orbit 6s linear infinite;
 }
 
 @keyframes orbit {
-  from { transform: rotate(0deg) translateX(1px); }
-  to { transform: rotate(360deg) translateX(1px); }
-}<div class="orbit-system">
+  from { transform: rotate(0deg) translateX(70px); }
+  to { transform: rotate(360deg) translateX(70px); }
+}
+</style>
+</head>
+
+<body>
+
+<h1>🌌 SITE WORKING</h1>
+
+<div class="blackhole"></div>
+
+<div class="orbit">
   <div class="sun"></div>
-  <div class="planet p1"></div>
-  <div class="planet p2"></div>
-  <div class="planet p3"></div>
+  <div class="planet"></div>
 </div>
+
+<p>If you see stars moving, orbit spinning, and a black hole → it works.</p>
+
+</body>
+</html>
+```
