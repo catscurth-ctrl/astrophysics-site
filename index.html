@@ -1,106 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>From Wonder To Theory</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>From Wonder To Theory</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      color: white;
-      text-align: left;
-    }
+<style>
+body {
+  margin: 0;
+  font-family: 'Georgia', serif;
+  color: white;
+  background: black;
+  overflow-x: hidden;
+}
 
-    .section {
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      padding: 50px;
-      background-size: cover;
-      background-position: center;
-    }
+/* HERO */
+.hero {
+  height: 100vh;
+  background: url("https://www.popsci.com/wp-content/uploads/2019/03/18/KFZL6FYNQM42V6VAW6557RALRM.jpg?quality=85") center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
 
-    .overlay {
-      background: rgba(0,0,0,0.6);
-      padding: 20px;
-      max-width: 600px;
-    }
+.hero h1 {
+  font-size: 3rem;
+}
 
-    h1 {
-      font-size: 50px;
-    }
+.hero p {
+  font-size: 1.2rem;
+}
 
-    h2 {
-      font-size: 35px;
-    }
+/* SECTION */
+.section {
+  padding: 100px 20px;
+  text-align: center;
+}
 
-    p {
-      line-height: 1.6;
-    }
-  </style>
+/* BLACK HOLE SECTION */
+.blackhole {
+  background: url("https://cdn.mos.cms.futurecdn.net/2CeVaHDPPm2QAiLGCCtmPZ.jpg") center/cover no-repeat;
+}
+
+.whitehole {
+  background: url("https://preview.redd.it/white-hole-v0-xxnv4v0dxlld1.png?auto=webp&s=0facd4aac0fbbbb8484c9697bb8f0a3f0c317875") center/cover no-repeat;
+}
+
+/* FADE IN ANIMATION */
+.fade {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 1s;
+}
+
+.fade.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+</style>
 </head>
 
 <body>
 
-<!-- SECTION 1 -->
-<div class="section" style="background-image: url('https://www.popsci.com/wp-content/uploads/2019/03/18/KFZL6FYNQM42V6VAW6557RALRM.jpg?quality=85');">
-  <div class="overlay">
-    <h1>From Wonder To Theory</h1>
-    <p>This is my journey through mathematics, astrophysics, and physics.</p>
-
-    <p>
-    I wondered about aliens when I was younger.<br><br>
-
-    I told my mom about them and she thought about it.<br><br>
-
-    At the time I didn’t care much about space but still loved reading physics books.<br><br>
-
-    I once thought the moon landing was fake, a hologram — but I realize now that was not smart.<br><br>
-
-    I didn’t think much about space at first, but math and physics always intrigued me.<br><br>
-
-    Then I discovered my passion for calculus, and math became my focus.<br><br>
-
-    I grew fascinated by black holes — their darkness and mystery pulled me in.<br><br>
-
-    I mastered algebra, kept advancing in calculus, and now I study theoretical physics and astrophysics.<br><br>
-
-    Today I’m unveiling my website with my full theory supported by data alongside my partner Leonardo.
-    </p>
-  </div>
+<div class="hero">
+  <h1>From Wonder To Theory</h1>
+  <p>This is my journey through mathematics, astrophysics, and physics</p>
 </div>
 
-<!-- SECTION 2 -->
-<div class="section" style="background-image: url('https://cdn.mos.cms.futurecdn.net/2CeVaHDPPm2QAiLGCCtmPZ.jpg');">
-  <div class="overlay">
-    <h2>Black Hole Structure</h2>
-    <p>
-    This diagram represents the key regions of a black hole including the event horizon, accretion disk, and singularity.
-    </p>
-  </div>
+<div class="section fade">
+  <p>
+  I wondered about aliens when I was younger.<br><br>
+  I told my mom about them and she thought about it.<br><br>
+  Then I discovered my passion for calculus and physics.<br><br>
+  I grew fascinated by black holes — their darkness and mystery pulled me in.
+  </p>
 </div>
 
-<!-- SECTION 3 -->
-<div class="section" style="background-image: url('https://preview.redd.it/white-hole-v0-xxnv4v0dxlld1.png?auto=webp&s=0facd4aac0fbbbb8484c9697bb8f0a3f0c317875');">
-  <div class="overlay">
-    <h2>White Hole Concept</h2>
-    <p>
-    Opposite of black holes, white holes are theorized to eject matter and energy instead of absorbing it.
-    </p>
-  </div>
+<div class="section blackhole fade">
+  <h2>Black Hole Theory</h2>
+  <p>
+  A singularity represents infinite density.  
+  The event horizon is the point of no return.
+  </p>
 </div>
 
-<!-- SECTION 4 -->
-<div class="section" style="background-image: url('https://www.popsci.com/wp-content/uploads/2019/03/18/KFZL6FYNQM42V6VAW6557RALRM.jpg?quality=85');">
-  <div class="overlay">
-    <h2>Cosmic Conclusion</h2>
-    <p>
-    This theory reimagines the journey of information from a singularity, offering new insights into how data emerges and evolves.
-    With my partner Leonardo, we continue to test and expand these ideas.
-    </p>
-  </div>
+<div class="section whitehole fade">
+  <h2>White Hole Concept</h2>
+  <p>
+  Opposite of black holes — instead of pulling in, they push out matter and energy.
+  </p>
 </div>
+
+<div class="section fade">
+  <h2>Cosmic Conclusion</h2>
+  <p>
+  This theory reimagines information from singularities and how data evolves through the universe.
+  </p>
+</div>
+
+<script>
+const faders = document.querySelectorAll('.fade');
+
+window.addEventListener('scroll', () => {
+  faders.forEach(el => {
+    const top = el.getBoundingClientRect().top;
+    if (top < window.innerHeight - 100) {
+      el.classList.add('show');
+    }
+  });
+});
+</script>
 
 </body>
 </html>
