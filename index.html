@@ -1,10 +1,9 @@
-```html<body style="background:red;">
-<h1>IF YOU SEE RED IT UPDATED</h1>
+```html id="3bdg2g"
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Working Test</title>
+<title>Astrophysics Project</title>
 
 <style>
 body {
@@ -15,56 +14,70 @@ body {
   text-align: center;
 }
 
-/* STAR BACKGROUND */
+/* STAR FIELD (SUBTLE) */
 body::before {
   content: "";
   position: fixed;
   width: 200%;
   height: 200%;
   background: url("https://www.transparenttextures.com/patterns/stardust.png");
-  animation: stars 40s linear infinite;
-  opacity: 0.5;
+  animation: stars 120s linear infinite;
+  opacity: 0.25;
 }
-
 @keyframes stars {
   from { transform: translate(0,0); }
-  to { transform: translate(-400px,-400px); }
+  to { transform: translate(-600px,-600px); }
 }
 
-/* BLACK HOLE (SAFE VERSION) */
+/* REALISTIC BLACK HOLE */
 .blackhole {
-  width: 150px;
-  height: 150px;
-  margin: 60px auto;
+  width: 180px;
+  height: 180px;
+  margin: 80px auto;
   border-radius: 50%;
-  background: radial-gradient(circle, black 60%, #222 80%);
+  background: radial-gradient(circle, black 70%, #111 90%);
   position: relative;
 }
 
+/* ACCRETION DISK */
 .blackhole::before {
   content: "";
   position: absolute;
-  width: 200px;
+  width: 240px;
   height: 60px;
-  top: 45px;
-  left: -25px;
+  top: 60px;
+  left: -30px;
   border-radius: 50%;
-  background: linear-gradient(to right, transparent, orange, white, orange, transparent);
-  opacity: 0.7;
+  background: linear-gradient(
+    to right,
+    transparent,
+    #d4a373,
+    white,
+    #d4a373,
+    transparent
+  );
+  opacity: 0.6;
+  filter: blur(1px);
+  animation: disk 20s linear infinite;
 }
 
-/* ORBIT */
-.orbit {
-  width: 200px;
-  height: 200px;
-  margin: 60px auto;
+@keyframes disk {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* ORBIT SYSTEM */
+.orbit-system {
+  width: 400px;
+  height: 400px;
+  margin: 100px auto;
   position: relative;
 }
 
 .sun {
-  width: 20px;
-  height: 20px;
-  background: white;
+  width: 18px;
+  height: 18px;
+  background: #fff3b0;
   border-radius: 50%;
   position: absolute;
   top: 50%;
@@ -72,37 +85,74 @@ body::before {
   transform: translate(-50%, -50%);
 }
 
+/* PLANETS */
 .planet {
-  width: 8px;
-  height: 8px;
-  background: gray;
-  border-radius: 50%;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform-origin: -70px;
+  border-radius: 50%;
+}
+
+/* PLANETS (REAL COLORS + SPEEDS) */
+.p1 {
+  width: 5px;
+  height: 5px;
+  background: #bbb;
+  transform-origin: -60px;
   animation: orbit 6s linear infinite;
 }
 
+.p2 {
+  width: 7px;
+  height: 7px;
+  background: #888;
+  transform-origin: -100px;
+  animation: orbit 10s linear infinite;
+}
+
+.p3 {
+  width: 9px;
+  height: 9px;
+  background: #aaa;
+  transform-origin: -140px;
+  animation: orbit 16s linear infinite;
+}
+
 @keyframes orbit {
-  from { transform: rotate(0deg) translateX(70px); }
-  to { transform: rotate(360deg) translateX(70px); }
+  from { transform: rotate(0deg) translateX(1px); }
+  to { transform: rotate(360deg) translateX(1px); }
+}
+
+/* TEXT */
+.section {
+  max-width: 800px;
+  margin: auto;
+  padding: 50px 20px;
+  line-height: 1.6;
 }
 </style>
 </head>
 
 <body>
 
-<h1>🌌 SITE WORKING</h1>
+<h1>🌌 From Wonder To Theory</h1>
 
 <div class="blackhole"></div>
 
-<div class="orbit">
+<h2>🪐 Orbital System</h2>
+
+<div class="orbit-system">
   <div class="sun"></div>
-  <div class="planet"></div>
+  <div class="planet p1"></div>
+  <div class="planet p2"></div>
+  <div class="planet p3"></div>
 </div>
 
-<p>If you see stars moving, orbit spinning, and a black hole → it works.</p>
+<div class="section">
+<p>
+(put your full story text here — keep everything you wrote)
+</p>
+</div>
 
 </body>
 </html>
