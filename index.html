@@ -1,4 +1,4 @@
-```html<h1 style="color:red;">THIS SHOULD CHANGE</h1>
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,44 +30,81 @@ body::before {
   to { transform: translate(-500px,-500px); }
 }
 
-/* 🌀 BLACK HOLE */
+/* 🌀 REAL BLACK HOLE */
 .blackhole {
-  width: 180px;
-  height: 180px;
-  margin: 60px auto;
+  width: 220px;
+  height: 220px;
+  margin: 80px auto;
   border-radius: 50%;
-  background: radial-gradient(circle, black 40%, purple 65%, transparent 75%);
-  box-shadow: 0 0 50px purple;
-  animation: spin 5s linear infinite;
+  position: relative;
+  background: radial-gradient(circle at center, black 30%, purple 60%, blue 80%);
+  box-shadow:
+    0 0 40px purple,
+    0 0 80px blue,
+    inset 0 0 30px black;
+  animation: spin 6s linear infinite;
 }
+
+.blackhole::before {
+  content: "";
+  position: absolute;
+  width: 260px;
+  height: 260px;
+  top: -20px;
+  left: -20px;
+  border-radius: 50%;
+  background: conic-gradient(
+    from 0deg,
+    transparent,
+    purple,
+    blue,
+    transparent
+  );
+  filter: blur(20px);
+  animation: spin 4s linear infinite reverse;
+}
+
 @keyframes spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
 
-/* 🪐 ORBIT */
+/* 🪐 REAL ORBIT SYSTEM */
 .orbit {
-  width: 250px;
-  height: 250px;
-  border: 1px solid rgba(255,255,255,0.2);
-  border-radius: 50%;
-  margin: 50px auto;
+  width: 300px;
+  height: 300px;
+  margin: 80px auto;
   position: relative;
 }
+
+.sun {
+  width: 40px;
+  height: 40px;
+  background: yellow;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 40px yellow;
+}
+
 .planet {
-  width: 25px;
-  height: 25px;
+  width: 18px;
+  height: 18px;
   background: cyan;
   border-radius: 50%;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform-origin: -100px;
-  animation: orbit 6s linear infinite;
+  transform-origin: -120px;
+  animation: orbit 8s linear infinite;
+  box-shadow: 0 0 15px cyan;
 }
+
 @keyframes orbit {
-  from { transform: rotate(0deg) translateX(100px); }
-  to { transform: rotate(360deg) translateX(100px); }
+  from { transform: rotate(0deg) translateX(120px); }
+  to { transform: rotate(360deg) translateX(120px); }
 }
 
 /* TEXT */
@@ -105,7 +142,9 @@ Today I’m unveiling my website with my full theory supported by data alongside
 </div>
 
 <h2>🪐 Orbital System</h2>
+
 <div class="orbit">
+  <div class="sun"></div>
   <div class="planet"></div>
 </div>
 
