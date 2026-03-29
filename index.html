@@ -1,62 +1,33 @@
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>Cosmic Simulation</title>
-
-<style>
-body {
-  margin: 0;
-  background: black;
-  color: white;
-  font-family: Arial;
-  text-align: center;
-  overflow-x: hidden;
-}
-
-/* ⭐ STARFIELD */
-body::before {
-  content: "";
-  position: fixed;
-  width: 300%;
-  height: 300%;
-  background: url("https://www.transparenttextures.com/patterns/stardust.png");
-  animation: stars 120s linear infinite;
-  opacity: 0.4;
-}
-@keyframes stars {
-  from { transform: translate(0,0); }
-  to { transform: translate(-800px,-800px); }
-}
-
-/* 🌀 BLACK HOLE */
+/* REALISTIC BLACK HOLE */
 .blackhole {
-  width: 250px;
-  height: 250px;
+  width: 200px;
+  height: 200px;
   margin: 80px auto;
   border-radius: 50%;
+  background: radial-gradient(circle, black 60%, #111 80%, transparent 100%);
   position: relative;
-  background: radial-gradient(circle at center, black 40%, #220033 65%, transparent 75%);
-  box-shadow:
-    0 0 60px purple,
-    0 0 120px blue,
-    inset 0 0 50px black;
 }
 
-/* ACCRETION DISK */
+/* THIN ACCRETION DISK */
 .blackhole::before {
   content: "";
   position: absolute;
-  width: 320px;
-  height: 120px;
-  top: 65px;
-  left: -35px;
+  width: 260px;
+  height: 80px;
+  top: 60px;
+  left: -30px;
   border-radius: 50%;
-  background: linear-gradient(90deg, orange, yellow, white, orange);
-  opacity: 0.8;
-  filter: blur(8px);
-  animation: disk 3s linear infinite;
+  background: linear-gradient(
+    to right,
+    transparent,
+    #ffcc66,
+    white,
+    #ffcc66,
+    transparent
+  );
+  opacity: 0.7;
+  filter: blur(2px);
+  animation: disk 12s linear infinite;
 }
 
 @keyframes disk {
@@ -64,59 +35,23 @@ body::before {
   to { transform: rotate(360deg); }
 }
 
-/* ✨ HAWKING RADIATION GLOW */
-.blackhole::after {
-  content: "";
-  position: absolute;
-  width: 350px;
-  height: 350px;
-  top: -50px;
-  left: -50px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(0,255,255,0.2), transparent 70%);
-  animation: pulse 3s infinite;
-}
-
-@keyframes pulse {
-  0%,100% { opacity: 0.3; }
-  50% { opacity: 0.8; }
-}
-
-/* 🌠 PARTICLES FALLING IN */
-.particle {
-  position: absolute;
-  width: 3px;
-  height: 3px;
-  background: white;
-  border-radius: 50%;
-  animation: fall linear infinite;
-}
-
-@keyframes fall {
-  to {
-    transform: translate(-50vw, 50vh) scale(0);
-    opacity: 0;
-  }
-}
-
-/* 🪐 ORBIT SYSTEM */
+/* ORBIT SYSTEM */
 .orbit-system {
-  position: relative;
   width: 400px;
   height: 400px;
-  margin: 100px auto;
+  margin: 80px auto;
+  position: relative;
 }
 
 .sun {
-  width: 40px;
-  height: 40px;
-  background: yellow;
+  width: 20px;
+  height: 20px;
+  background: #fff3b0;
   border-radius: 50%;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  box-shadow: 0 0 50px yellow;
 }
 
 /* PLANETS */
@@ -127,79 +62,37 @@ body::before {
   border-radius: 50%;
 }
 
-/* DIFFERENT PLANETS */
+/* DIFFERENT ORBITS */
 .p1 {
-  width: 10px;
-  height: 10px;
-  background: cyan;
-  transform-origin: -80px;
-  animation: orbit 4s linear infinite;
+  width: 6px;
+  height: 6px;
+  background: #ccc;
+  transform-origin: -60px;
+  animation: orbit 5s linear infinite;
 }
 
 .p2 {
-  width: 14px;
-  height: 14px;
-  background: red;
-  transform-origin: -120px;
-  animation: orbit 7s linear infinite;
+  width: 8px;
+  height: 8px;
+  background: #888;
+  transform-origin: -100px;
+  animation: orbit 9s linear infinite;
 }
 
 .p3 {
-  width: 18px;
-  height: 18px;
-  background: blue;
-  transform-origin: -160px;
-  animation: orbit 10s linear infinite;
+  width: 10px;
+  height: 10px;
+  background: #aaa;
+  transform-origin: -140px;
+  animation: orbit 14s linear infinite;
 }
 
 @keyframes orbit {
   from { transform: rotate(0deg) translateX(1px); }
   to { transform: rotate(360deg) translateX(1px); }
-}
-
-/* TEXT */
-.section {
-  max-width: 900px;
-  margin: auto;
-  padding: 60px 20px;
-  line-height: 1.7;
-}
-</style>
-</head>
-
-<body>
-
-<h1>🌌 From Wonder To Theory</h1>
-
-<div class="blackhole"></div>
-
-<!-- PARTICLES SCRIPT -->
-<script>
-for (let i = 0; i < 60; i++) {
-  let p = document.createElement("div");
-  p.className = "particle";
-  p.style.top = Math.random() * 100 + "vh";
-  p.style.left = Math.random() * 100 + "vw";
-  p.style.animationDuration = (2 + Math.random()*3) + "s";
-  document.body.appendChild(p);
-}
-</script>
-
-<h2>🪐 Solar System</h2>
-
-<div class="orbit-system">
+}<div class="orbit-system">
   <div class="sun"></div>
   <div class="planet p1"></div>
   <div class="planet p2"></div>
   <div class="planet p3"></div>
 </div>
-
-<div class="section">
-<p>
-I wondered about aliens when I was younger... (keep your full text here)
-</p>
-</div>
-
-</body>
-</html>
-```
