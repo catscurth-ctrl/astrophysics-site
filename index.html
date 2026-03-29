@@ -1,103 +1,74 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>My Awesome Website</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-      color: white;
-      text-align: center;
-    }
+<meta charset="UTF-8">
+<title>Galaxy Site</title>
 
-    header {
-      padding: 40px;
-      font-size: 2.5em;
-      font-weight: bold;
-    }
+<style>
+body {
+  margin: 0;
+  color: white;
+  font-family: Arial;
+  text-align: center;
+  background: black;
+  overflow: hidden;
+}
 
-    nav {
-      background: rgba(255,255,255,0.1);
-      padding: 10px;
-    }
+/* animated stars */
+body::before {
+  content: "";
+  position: fixed;
+  width: 200%;
+  height: 200%;
+  background: url("https://www.transparenttextures.com/patterns/stardust.png");
+  animation: moveStars 60s linear infinite;
+  opacity: 0.4;
+}
 
-    nav a {
-      color: white;
-      margin: 0 15px;
-      text-decoration: none;
-      font-size: 1.2em;
-      transition: 0.3s;
-    }
+@keyframes moveStars {
+  from { transform: translate(0,0); }
+  to { transform: translate(-500px,-500px); }
+}
 
-    nav a:hover {
-      color: #00eaff;
-    }
+header {
+  font-size: 3em;
+  padding: 40px;
+}
 
-    .container {
-      padding: 50px;
-    }
+.card {
+  margin: 50px auto;
+  padding: 30px;
+  width: 80%;
+  max-width: 500px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  transition: 0.3s;
+}
 
-    .card {
-      background: rgba(255,255,255,0.1);
-      margin: 20px auto;
-      padding: 20px;
-      border-radius: 15px;
-      width: 80%;
-      max-width: 500px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.5);
-      transition: transform 0.3s;
-    }
+.card:hover {
+  transform: scale(1.05);
+}
 
-    .card:hover {
-      transform: scale(1.05);
-    }
-
-    button {
-      padding: 10px 20px;
-      border: none;
-      border-radius: 10px;
-      background: #00eaff;
-      color: black;
-      font-size: 1em;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-
-    button:hover {
-      background: #00bcd4;
-    }
-
-    footer {
-      margin-top: 50px;
-      padding: 20px;
-      background: rgba(0,0,0,0.3);
-    }
-  </style>
+button {
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  background: cyan;
+  cursor: pointer;
+}
+</style>
 </head>
 
 <body>
 
-<header>🚀 My Website</header>
+<header>🌌 My Galaxy Project</header>
 
-<nav>
-  <a href="#">Home</a>
-  <a href="#">About</a>
-  <a href="#">Projects</a>
-</nav>
-
-<div class="container">
-  <div class="card">
-    <h2>Welcome</h2>
-    <p>This is my awesome website. I'm learning to code!</p>
-    <button onclick="alert('You clicked me!')">Click Me</button>
-  </div>
+<div class="card">
+  <h2>Welcome</h2>
+  <p>This is my space-themed website 🚀</p>
+  <button onclick="alert('Welcome to space!')">Launch</button>
 </div>
-
-<footer>
-  © 2026 My Website
-</footer>
 
 </body>
 </html>
