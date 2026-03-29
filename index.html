@@ -41,10 +41,7 @@ body::before {
   background: rgba(0,0,0,0.6);
   padding: 20px;
   border-radius: 15px;
-}
-
-h1, h2 {
-  text-shadow: 0 0 10px white;
+  max-width: 500px;
 }
 
 /* SECTIONS */
@@ -54,17 +51,27 @@ h1, h2 {
 }
 
 .text-box {
-  max-width: 800px;
+  max-width: 900px;
   margin: auto;
   background: rgba(0,0,0,0.6);
-  padding: 20px;
-  border-radius: 10px;
+  padding: 25px;
+  border-radius: 12px;
 }
 
 /* BLACK HOLE */
 .blackhole {
   background: url("https://images.unsplash.com/photo-1446776811953-b23d57bd21aa") center/cover;
-  padding: 100px 20px;
+  padding: 120px 20px;
+}
+
+/* STORY */
+.story p {
+  margin-bottom: 15px;
+}
+
+/* GLOW */
+h1, h2 {
+  text-shadow: 0 0 10px white;
 }
 
 /* FADE */
@@ -108,21 +115,32 @@ h1, h2 {
   <div class="text-box">
     <h2>The 101010 Atomic Singularity Bridge Theory Explained.</h2>
     <p>
-    In my theory, black holes and white holes work together like a kind of cosmic 3D printer...
-    (you can paste full theory here if you want all of it shown)
+    In my theory, black holes and white holes work together like a kind of cosmic 3D printer.
+    A black hole absorbs and stretches atoms, this process is known as spaghettification.
+    A white hole, being the opposite, would then reconstruct them.
+    I agree that a black hole compresses 3D objects into 2D forms and as Stephen Hawking showed, black holes don’t destroy information, they preserve it.
+    Thus, my theory proposes that atoms, your personal binary code, are saved in 2D form on a black hole.
+    Then, through Einstein’s wormhole, a shortcut to another reality, dark matter making up 85% of space acts like ink.
+    It is your consciousness, your memories, what make you you.
+    In short, if a black hole stores your code in 2D, then dark matter guides it through the wormhole and the white hole rebuilds you in a different reality.
+    Plus, while black holes absorb light, white holes emit it, so in theory the black hole encodes you and the white hole rebirths you into a new reality.
     </p>
   </div>
 </div>
 
 <!-- STORY -->
-<div class="section fade">
+<div class="section story fade">
   <h2>From Wonder To Theory.</h2>
   <div class="text-box">
     <p>I wondered about aliens when I was younger.</p>
     <p>I told my mom about them and she thought about it.</p>
-    <p>I once thought the moon landing was fake but realized that was not smart.</p>
-    <p>I discovered my passion for math, calculus, and physics.</p>
-    <p>I became fascinated by black holes and their mysteries.</p>
+    <p>At the time I didn’t care much about space but still loved reading physics books.</p>
+    <p>I once thought the moon landing was fake, a hologram but I realize now that was not smart.</p>
+    <p>I didn’t think much about space at first but math and physics always intrigued me.</p>
+    <p>Then I discovered my passion for calculus and advanced math became my focus.</p>
+    <p>I grew fascinated by black holes, their darkness and mystery pulled me in.</p>
+    <p>I mastered algebra, kept advancing in calculus and now I study theoretical physics and astrophysics.</p>
+    <p>Today I’m unveiling my website with my full theory supported by data alongside my partner Leonardo who has been a vital instrument in this journey.</p>
   </div>
 </div>
 
@@ -131,118 +149,11 @@ h1, h2 {
   <div class="text-box">
     <h2>Cosmic Conclusion</h2>
     <p>
-    In conclusion this theory reimagines the journey of information from a singularity...
+    In conclusion this theory reimagines the journey of information from a singularity offering new insights into how data emerges and evolves.
+    With my partner Leonardo we will continue to test and expand these ideas pushing the boundaries of what we understand about the universe.
     </p>
   </div>
 </div>
-
-</body>
-</html><!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>From Wonder To Theory</title>
-
-<style>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  color: white;
-  background: black;
-}
-
-/* HERO SECTION */
-.hero {
-  height: 100vh;
-  background: url('https://images.unsplash.com/photo-1462331940025-496dfbfc7564') center/cover no-repeat;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.hero h1 {
-  font-size: 50px;
-}
-
-.hero p {
-  font-size: 18px;
-}
-
-/* TEXT SECTIONS */
-.section {
-  padding: 80px;
-  background: rgba(0,0,0,0.7);
-}
-
-.text-box {
-  max-width: 800px;
-  margin: auto;
-  background: rgba(0,0,0,0.6);
-  padding: 20px;
-  border-radius: 10px;
-}
-
-/* BLACK HOLE SECTION */
-.blackhole {
-  height: 100vh;
-  background: url('https://images.unsplash.com/photo-1446776811953-b23d57bd21aa') center/cover no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* ANIMATION */
-.fade-in {
-  animation: fadeIn 2s ease-in;
-}
-
-@keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity: 1;}
-}
-</style>
-</head>
-
-<body>
-
-<!-- HERO -->
-<section class="hero fade-in">
-  <h1>From Wonder To Theory</h1>
-  <p>This is my journey through mathematics, astrophysics, and physics.</p>
-</section>
-
-<!-- STORY -->
-<section class="section fade-in">
-  <div class="text-box">
-    <p>I wondered about aliens when I was younger.</p>
-    <p>I told my mom about them and she thought about it.</p>
-    <p>At the time I didn’t care much about space but still loved reading physics books.</p>
-    <p>I once thought the moon landing was fake… but I realized that wasn’t smart.</p>
-    <p>Then I discovered my passion for calculus and math became my focus.</p>
-    <p>I grew fascinated by black holes — their darkness and mystery pulled me in.</p>
-  </div>
-</section>
-
-<!-- THEORY -->
-<section class="blackhole fade-in">
-  <div class="text-box">
-    <p>My theory suggests black holes and white holes act like a cosmic bridge.</p>
-    <p>Black holes compress information into 2D, while white holes reconstruct it.</p>
-    <p>This could explain how information is preserved across the universe.</p>
-  </div>
-</section>
-
-<!-- CONCLUSION -->
-<section class="section fade-in">
-  <div class="text-box">
-    <h2>Cosmic Conclusion</h2>
-    <p>In conclusion, this theory reimagines how information moves through the universe.</p>
-    <p>With continued research, I will expand these ideas and push the boundaries of physics.</p>
-  </div>
-</section>
 
 </body>
 </html>
