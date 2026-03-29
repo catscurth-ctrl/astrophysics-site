@@ -11,35 +11,21 @@ body {
   font-family: Arial, sans-serif;
   color: white;
   background: black;
-  text-align: center;
 }
 
-/* STAR BACKGROUND */
+/* STAR ANIMATION */
 body::before {
   content: "";
   position: fixed;
   width: 200%;
   height: 200%;
   background: url("https://www.transparenttextures.com/patterns/stardust.png");
-  animation: stars 60s linear infinite;
+  animation: stars 100s linear infinite;
   opacity: 0.3;
 }
 @keyframes stars {
   from {transform: translate(0,0);}
-  to {transform: translate(-400px,-400px);}
-}
-
-/* SECTIONS */
-.section {
-  padding: 80px 20px;
-}
-
-.text-box {
-  max-width: 800px;
-  margin: auto;
-  background: rgba(0,0,0,0.6);
-  padding: 20px;
-  border-radius: 10px;
+  to {transform: translate(-600px,-600px);}
 }
 
 /* HERO */
@@ -48,18 +34,40 @@ body::before {
   background: url("https://images-assets.nasa.gov/image/pillars-of-creation/pillars-of-creation~orig.jpg") center/cover no-repeat;
   display: flex;
   align-items: center;
-  justify-content: center;
+  padding: 50px;
+}
+
+.hero-text {
+  background: rgba(0,0,0,0.6);
+  padding: 25px;
+  border-radius: 15px;
+  max-width: 600px;
+}
+
+/* SECTIONS */
+.section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.text-box {
+  max-width: 900px;
+  margin: auto;
+  background: rgba(0,0,0,0.6);
+  padding: 25px;
+  border-radius: 12px;
+  line-height: 1.6;
 }
 
 /* BLACK HOLE */
 .blackhole {
   background: url("https://images.unsplash.com/photo-1446776811953-b23d57bd21aa") center/cover no-repeat;
-  padding: 100px 20px;
+  padding: 120px 20px;
 }
 
-/* TEXT */
+/* GLOW TEXT */
 h1, h2 {
-  text-shadow: 0 0 10px white;
+  text-shadow: 0 0 12px white;
 }
 
 /* FADE */
@@ -77,7 +85,7 @@ h1, h2 {
 
 <!-- HERO -->
 <div class="hero fade">
-  <div class="text-box">
+  <div class="hero-text">
     <h1>Expanding Your Universe</h1>
     <p>
     Embark on an exhilarating cosmic journey with us as we redefine what it means to explore the universe.
@@ -103,13 +111,15 @@ h1, h2 {
   <div class="text-box">
     <h2>The 101010 Atomic Singularity Bridge Theory Explained.</h2>
     <p>
-    In my theory, black holes and white holes work together like a cosmic 3D printer.
-    A black hole absorbs and stretches atoms (spaghettification).
-    A white hole would then reconstruct them.
-    Black holes compress 3D into 2D and preserve information.
-    My theory suggests atoms are stored in 2D and sent through a wormhole.
-    Dark matter carries consciousness and memory.
-    A white hole then rebuilds you in another reality.
+    In my theory, black holes and white holes work together like a kind of cosmic 3D printer.
+    A black hole absorbs and stretches atoms, this process is known as spaghettification.
+    A white hole, being the opposite, would then reconstruct them.
+    I agree that a black hole compresses 3D objects into 2D forms and as Stephen Hawking showed, black holes don’t destroy information, they preserve it.
+    Thus, my theory proposes that atoms, your personal binary code, are saved in 2D form on a black hole.
+    Then, through Einstein’s wormhole, a shortcut to another reality, dark matter making up 85% of space acts like ink.
+    It is your consciousness, your memories, what make you you.
+    In short, if a black hole stores your code in 2D, then dark matter guides it through the wormhole and the white hole rebuilds you in a different reality.
+    Plus, while black holes absorb light, white holes emit it, so in theory the black hole encodes you and the white hole rebirths you into a new reality.
     </p>
   </div>
 </div>
@@ -120,9 +130,13 @@ h1, h2 {
   <div class="text-box">
     <p>I wondered about aliens when I was younger.</p>
     <p>I told my mom about them and she thought about it.</p>
-    <p>I once thought the moon landing was fake but realized that was not smart.</p>
-    <p>I discovered my passion for math, calculus, and physics.</p>
-    <p>I became fascinated by black holes and their mysteries.</p>
+    <p>At the time I didn’t care much about space but still loved reading physics books.</p>
+    <p>I once thought the moon landing was fake, a hologram but I realize now that was not smart.</p>
+    <p>I didn’t think much about space at first but math and physics always intrigued me.</p>
+    <p>Then I discovered my passion for calculus and advanced math became my focus.</p>
+    <p>I grew fascinated by black holes, their darkness and mystery pulled me in.</p>
+    <p>I mastered algebra, kept advancing in calculus and now I study theoretical physics and astrophysics.</p>
+    <p>Today I’m unveiling my website with my full theory supported by data alongside my partner Leonardo who has been a vital instrument in this journey.</p>
   </div>
 </div>
 
@@ -131,8 +145,8 @@ h1, h2 {
   <div class="text-box">
     <h2>Cosmic Conclusion</h2>
     <p>
-    This theory reimagines how information moves through the universe.
-    I will continue to expand these ideas and push the boundaries of physics.
+    In conclusion this theory reimagines the journey of information from a singularity offering new insights into how data emerges and evolves.
+    With my partner Leonardo we will continue to test and expand these ideas pushing the boundaries of what we understand about the universe.
     </p>
   </div>
 </div>
